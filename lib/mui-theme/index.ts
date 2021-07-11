@@ -1,3 +1,15 @@
 import { createTheme, Theme } from '@material-ui/core/styles'
 
-export const muiGlobalTheme: Theme = createTheme({})
+import {
+  globalPaletteOptions,
+  globalTypographyOptions,
+  mixins,
+  spacing
+} from './options'
+
+export const muiGlobalTheme: Theme = createTheme({
+  mixins: { ...mixins },
+  palette: { ...globalPaletteOptions },
+  spacing: spacing,
+  typography: { ...globalTypographyOptions }
+})
