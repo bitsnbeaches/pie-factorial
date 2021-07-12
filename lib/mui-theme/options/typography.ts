@@ -11,7 +11,7 @@ const globalOptions = {
     'sans-serif',
     '"Apple Color Emoji"',
     '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
+    '"Segoe UI Symbol"'
   ].join(','),
   fontSize: 14
 } as TypographyOptions

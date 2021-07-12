@@ -3,7 +3,7 @@ import Badge from '@material-ui/core/Badge'
 
 import { NotificationIcon, NotificationIconVariants } from '.'
 
-function NotificationsBadge({ count, status }: NotificationsBadgeProps) {
+function NotificationsBadge ({ count, status }: NotificationsBadgeProps) {
   return (
     <Badge badgeContent={count} color='secondary'>
       <NotificationIcon variant={status} />

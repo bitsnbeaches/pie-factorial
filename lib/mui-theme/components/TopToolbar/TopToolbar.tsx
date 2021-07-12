@@ -7,16 +7,25 @@ import { useStyles } from './TopToolbar.styles'
 
 const Home = () => {
   const styles = useStyles()
-  const handleNotificationClick = () => { console.log('Abrir lista de notificações') }
+  const handleNotificationClick = () => {
+    console.log('Abrir lista de notificações')
+  }
 
   return (
     <AppBar position='sticky' elevation={0} className={styles.root}>
       <Toolbar className={styles.container}>
         <GetGoalLogo />
-        <Box className={clsx(styles.horizontalDividers, styles.notificationsButton)}>
+        <Box
+          className={clsx(
+            styles.horizontalDividers,
+            styles.notificationsButton
+          )}
+        >
           <NotificationsButton onClick={handleNotificationClick} />
         </Box>
-        <UserAvatar alt='Gato Fernandes' dropdown>GF</UserAvatar>
+        <UserAvatar alt='Gato Fernandes' dropdown>
+          GF
+        </UserAvatar>
       </Toolbar>
     </AppBar>
   )
