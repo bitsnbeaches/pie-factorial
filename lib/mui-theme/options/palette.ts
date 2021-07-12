@@ -13,6 +13,9 @@ const globalOptions = {
       dark: '#000022',
       contrastText: '#ffffff',
     },
+    background: {
+      default: '#f0f2f7'
+    }
 } as PaletteOptions
 
 export default globalOptions
