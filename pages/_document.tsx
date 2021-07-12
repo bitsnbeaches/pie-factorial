@@ -1,15 +1,15 @@
 import * as React from 'react'
 import Document, {
   DocumentInitialProps,
-  Html,
   Head,
+  Html,
   Main,
-  NextScript,
+  NextScript
 } from 'next/document'
 import { ServerStyleSheets } from '@material-ui/core/styles'
 
 export default class RootDocument extends Document {
-  render() {
+  render () {
     return (
       <Html lang='pt-br'>
         <Head>
@@ -34,7 +34,7 @@ RootDocument.getInitialProps = async (ctx): Promise<DocumentInitialProps> => {
 
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: App => props => sheets.collect(<App {...props} />),
+      enhanceApp: App => props => sheets.collect(<App {...props} />)
     })
 
   const initialProps = await Document.getInitialProps(ctx)
@@ -43,7 +43,7 @@ RootDocument.getInitialProps = async (ctx): Promise<DocumentInitialProps> => {
     ...initialProps,
     styles: [
       ...React.Children.toArray(initialProps.styles),
-      sheets.getStyleElement(),
-    ],
+      sheets.getStyleElement()
+    ]
   }
 }

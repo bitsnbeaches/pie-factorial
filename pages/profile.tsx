@@ -18,14 +18,12 @@ import {
 import AccountCircle from '@material-ui/icons/AccountCircle'
 import PasswordIcon from '@material-ui/icons/LockOutlined'
 
-import { Paths } from '../constants/routes'
 import { Link } from '../lib/mui-theme/components'
-import { navigateToPath } from '../lib/utils/navigation'
 
 const useStyles = makeStyles(({ palette, spacing }: Theme) => {
   return createStyles({
     header: {
-      marginBottom: spacing(24)
+      marginBottom: spacing(16)
     },
     row: {
       paddingTop: spacing(16),
@@ -52,21 +50,20 @@ const useStyles = makeStyles(({ palette, spacing }: Theme) => {
   })
 })
 
-export default withRouter(function Login ({ router }: WithRouterProps) {
+export default withRouter(function Profile ({ router }: WithRouterProps) {
   const styles = useStyles()
   const { spacing } = useTheme()
 
-  const navigateToAuthedApp = React.useCallback(
-    () => navigateToPath(router)(Paths.Visualize),
-    [router]
-  )
+  const goToDashboard = React.useCallback(() => router.push('/visualize'), [
+    router
+  ])
 
-  const loginWithGoogle = () => {
-    console.log('Sign In with Google')
+  const signinWithGoogle = () => {
+    console.log('Sign Up with Google')
   }
 
-  const loginWithFacebook = () => {
-    console.log('Sign In with Facebook')
+  const signinWithFacebook = () => {
+    console.log('Sign Up with Facebook')
   }
 
   return (
@@ -84,16 +81,16 @@ export default withRouter(function Login ({ router }: WithRouterProps) {
             <form>
               <header className={styles.header}>
                 <Typography variant='h2'>
-                  Visualize simple data simply.
+                  Check on your PIE! from anywhere.
                 </Typography>
                 <Typography
                   variant='subtitle2'
                   color='textSecondary'
                   gutterBottom
                 >
-                  Want to save your charts online?{' '}
+                  Already signed up?{' '}
                   <Typography color='primary' variant='inherit'>
-                    <Link href='/profile'>Sign up and setup syncing.</Link>
+                    <Link href='/'>Sign in and follow your nose.</Link>
                   </Typography>
                 </Typography>
               </header>
@@ -101,7 +98,7 @@ export default withRouter(function Login ({ router }: WithRouterProps) {
                 <Grid
                   container
                   item
-                  xs={10}
+                  xs={12}
                   justifyContent='space-around'
                   className={styles.row}
                 >
@@ -110,9 +107,9 @@ export default withRouter(function Login ({ router }: WithRouterProps) {
                       fullWidth
                       variant='outlined'
                       color='secondary'
-                      onClick={loginWithGoogle}
+                      onClick={signinWithGoogle}
                     >
-                      Login with Google
+                      Sign Up with Google
                     </Button>
                   </Grid>
                   <Grid item xs={5}>
@@ -120,15 +117,15 @@ export default withRouter(function Login ({ router }: WithRouterProps) {
                       fullWidth
                       variant='outlined'
                       color='secondary'
-                      onClick={loginWithFacebook}
+                      onClick={signinWithFacebook}
                     >
-                      Login with Facebook
+                      Sign Up with Facebook
                     </Button>
                   </Grid>
                 </Grid>
                 <Grid item xs={10} className={styles.divider}>
                   <Typography variant='caption' className={styles.dividerText}>
-                    or login with your account
+                    or create a new account
                   </Typography>
                   <Divider />
                 </Grid>
@@ -159,11 +156,24 @@ export default withRouter(function Login ({ router }: WithRouterProps) {
                       fullWidth
                     />
                   </Grid>
+                  <Grid item xs={11} className={styles.fields}>
+                    <TextField
+                      label='Password verification'
+                      InputProps={{
+                        startAdornment: (
+                          <InputAdornment position='start'>
+                            <PasswordIcon />
+                          </InputAdornment>
+                        )
+                      }}
+                      fullWidth
+                    />
+                  </Grid>
                   <Grid item xs={6} className={styles.fields}>
                     <Button
                       color='secondary'
                       fullWidth
-                      onClick={navigateToAuthedApp}
+                      onClick={goToDashboard}
                       variant='contained'
                     >
                       Start Baking!
