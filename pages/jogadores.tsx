@@ -1,15 +1,16 @@
 import * as React from 'react'
-import { Grid } from '@material-ui/core'
+import { Grid, Typography } from '@material-ui/core'
 
 import { NavRail, TopToolbar } from '../lib/mui-theme/components'
 
-const Dashboard = () => (
+const Jogadores = () => (
   <>
     <TopToolbar />
     <Grid container>
       <NavRail />
+      <Typography variant='h1'>Jogadores</Typography>
     </Grid>
   </>
 )
 
-export default Dashboard
+export default Jogadores
