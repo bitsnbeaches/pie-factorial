@@ -23,33 +23,35 @@ project root
 ├── README.md
 ├── components
 ├── constants
-│   ├── navrail-items.ts
-│   └── routes.ts
+│   ├── navrail-items.ts
+│   └── routes.ts
 ├── lib
-│   ├── mui-theme
-│   │   ├── components
-│   │   └── options
-│   │       ├── icons.ts
-│   │       ├── mixins.ts
-│   │       ├── palette.ts
-│   │       ├── spacing.ts
-│   │       └── typography.ts
-│   └── utils
-│       └── navigation.ts
+│   ├── mui-theme
+│   │   ├── components
+│   │   └── options
+│   │       ├── icons.ts
+│   │       ├── mixins.ts
+│   │       ├── palette.ts
+│   │       ├── spacing.ts
+│   │       └── typography.ts
+│   └── utils
+│       └── navigation.ts
 ├── pages
-│   ├── _app.tsx
-│   ├── _document.tsx
-│   ├── checklist.tsx
-│   ├── create.tsx
-│   ├── index.tsx
-│   ├── login.tsx
-│   ├── new-profile.tsx
-│   ├── profile.tsx
-│   ├── settings.tsx
-│   └── visualize.tsx
+│   ├── _app.tsx
+│   ├── _document.tsx
+│   ├── checklist-sample.tsx
+│   ├── create.tsx
+│   ├── index.tsx
+│   ├── login.tsx
+│   ├── new-profile.tsx
+│   ├── profile.tsx
+│   ├── settings.tsx
+│   └── visualize.tsx
 ├── public
-│   ├── brand.svg
-│   └── favicon.ico
+│   ├── brand.svg
+│   └── favicon.ico
+├── .eslintrc
+├── .gitignore
 ├── next-env.d.ts
 ├── package.json
 ├── tsconfig.json
