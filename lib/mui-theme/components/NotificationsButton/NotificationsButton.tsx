@@ -9,7 +9,9 @@ import {
 const COUNT = 3
 const STATUS = 'unread' as NotificationIconVariants
 
-function NotificationsButton ({ onClick }: NotificationsButtonProps) {
+export default function NotificationsButton ({
+  onClick
+}: NotificationsButtonProps) {
   const [{ status, totalOfNotifications }] = React.useState({
     status: STATUS,
     totalOfNotifications: COUNT
@@ -29,5 +31,3 @@ function NotificationsButton ({ onClick }: NotificationsButtonProps) {
 export type NotificationsButtonProps = {
   onClick?: () => void
 }
-
-export default NotificationsButton

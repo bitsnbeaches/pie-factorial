@@ -1,10 +1,10 @@
 import * as React from 'react'
 
-import ZeroNotifications from '@material-ui/icons/NotificationsNoneOutlined'
-import UnreadNotifications from '@material-ui/icons/NotificationsActiveOutlined'
 import NotificationsOff from '@material-ui/icons/NotificationsOffOutlined'
+import UnreadNotifications from '@material-ui/icons/NotificationsActiveOutlined'
+import ZeroNotifications from '@material-ui/icons/NotificationsNoneOutlined'
 
-function NotificationIcon ({ variant }: NotificationIconProps) {
+export default function NotificationIcon ({ variant }: NotificationIconProps) {
   const CurrentIcon = React.useMemo(
     () =>
       ({
@@ -23,5 +23,3 @@ export type NotificationIconVariants = 'none' | 'off' | 'unread'
 export type NotificationIconProps = {
   variant?: NotificationIconVariants
 }
-
-export default NotificationIcon

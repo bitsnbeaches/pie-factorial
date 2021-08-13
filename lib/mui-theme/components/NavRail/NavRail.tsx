@@ -3,13 +3,11 @@ import ListItem from '@material-ui/core/ListItem'
 import MenuItem from '@material-ui/core/MenuItem'
 import MenuList from '@material-ui/core/MenuList'
 
-import navrailItems, {
-  MenuItem as MenuItemType
-} from '../../../../constants/navrail-items'
+import { MenuItem as MenuItemType } from '../../../../constants/navrail-items'
 import { Link } from '..'
 import { useStyles } from './NavRail.styles'
 
-export default function NavRail ({ menuItems = navrailItems }: NavRailProps) {
+export default function NavRail ({ menuItems }: NavRailProps) {
   const styles = useStyles()
 
   return (
