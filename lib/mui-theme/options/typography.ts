@@ -1,6 +1,6 @@
 import { TypographyOptions } from '@material-ui/core/styles/createTypography'
 
-const globalOptions = {
+const typography = {
   fontFamily: [
     'Roboto',
     '-apple-system',
@@ -27,4 +27,4 @@ const globalOptions = {
   }
 } as TypographyOptions
 
-export default globalOptions
+export default typography

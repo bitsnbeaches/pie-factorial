@@ -1,7 +1,7 @@
 import { PaletteOptions } from '@material-ui/core/styles/createPalette'
 import { blue, pink } from '@material-ui/core/colors'
 
-const globalOptions = {
+const palette = {
   primary: {
     light: '#ff79b0',
     main: pink.A200,
@@ -19,4 +19,4 @@ const globalOptions = {
   }
 } as PaletteOptions
 
-export default globalOptions
+export default palette
