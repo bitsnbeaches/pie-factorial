@@ -2,7 +2,7 @@
   display: block;
 }
 
-.progress-ring {
+.progress_ring {
   stroke: var(--stroke-color, black);
   stroke-dasharray: var(--circumference, 0);
   stroke-dashoffset: var(--circumference, 0);
