@@ -9,6 +9,12 @@ import Typography from '@material-ui/core/Typography'
 import { Layout } from '../components'
 
 export default function NewProfile () {
+  const [emailPublicity, setEmailPublicity] = React.useState(false)
+
+  const handleEmailPublicityToggle = React.useCallback(
+    () => setEmailPublicity(!emailPublicity),
+    [emailPublicity]
+  )
   const handleFormSubmit = () => {
     console.log('Create new profile')
   }
@@ -50,10 +56,12 @@ export default function NewProfile () {
             </Grid>
             <Typography>Display e-mail publicly</Typography>
             <Switch
-              checked={false}
-              onChange={() => {}}
-              name='checkedA'
-              inputProps={{ 'aria-label': 'secondary checkbox' }}
+              checked={emailPublicity}
+              onChange={handleEmailPublicityToggle}
+              name='emailPublicity'
+              inputProps={{
+                'aria-label': 'E-mail publicity preference switch'
+              }}
             />
           </Grid>
         </Grid>

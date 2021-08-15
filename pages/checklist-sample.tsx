@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-export default function CheckList () {
+export default function CheckListSample () {
   const classes = useStyles()
   const [checked, setChecked] = React.useState([1])
 

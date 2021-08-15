@@ -12,16 +12,20 @@ import PriorityHighIcon from '@material-ui/icons/PriorityHigh'
 import TimelapseIcon from '@material-ui/icons/Timelapse'
 import Toll from '@material-ui/icons/Toll'
 
-//      <AdjustIcon />
-//      <AlbumIcon />
-//      <BubbleChartIcon />
-//      <DataUsageIcon />
-//      <DiscFullIcon style={{ fontSize: 48 }} />
-//      <DonutSmallIcon />
-//      <FiberSmartRecordIcon />
-//      <GroupWorkIcon />
-//      <HdrStrongIcon />
-//      <HdrWeakIcon />
-//      <PriorityHighIcon />
-//      <TimelapseIcon />
-//      <Toll />
+const icons = {
+  AdjustIcon,
+  AlbumIcon,
+  BubbleChartIcon,
+  DataUsageIcon,
+  DiscFullIcon,
+  DonutSmallIcon,
+  FiberSmartRecordIcon,
+  GroupWorkIcon,
+  HdrStrongIcon,
+  HdrWeakIcon,
+  PriorityHighIcon,
+  TimelapseIcon,
+  Toll
+}
+
+export default icons

@@ -14,7 +14,7 @@ export default function Create () {
 
   const handleFormSubmit = () => {
     const values = slices.split(',').map(Number.parseFloat)
-    const sum = values.reduce((total, slice) => (total += slice), 0)
+    const sum = values.reduce((total, slice) => total + slice, 0)
     const percentages = values.map(slice => (slice * 100) / sum)
 
     console.log('Create pie chart')

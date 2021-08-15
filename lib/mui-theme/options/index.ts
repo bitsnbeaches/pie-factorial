@@ -1,3 +1,4 @@
+export { default as icons } from './icons'
 export { default as mixins } from './mixins'
 export * from './palette'
 export { default as globalPaletteOptions } from './palette'
