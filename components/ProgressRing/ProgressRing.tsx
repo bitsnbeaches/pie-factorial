@@ -1,14 +1,12 @@
 import React from 'react'
 import { useProgressRingEquations } from '../../lib/hooks'
-import styles from './ProgressRing.module.css'
+import { useStyles } from './ProgressRing.styles'
 
 export type Props = {
   progress: number
-  size: number
-  strokeWidth: number
+  size?: number
+  strokeWidth?: number
 }
-
-type CSSStyle = any
 
 const ProgressRing: React.FC<Props> = ({
   progress,
@@ -22,17 +20,14 @@ const ProgressRing: React.FC<Props> = ({
   })
   const ariaValueNow = Math.ceil(progress * 100)
 
-  const circleStyle = {
-    '--circumference': circumference,
-    '--progress': progressArc,
-  } as CSSStyle
+  const styles = useStyles({ circumference, progressArc })
 
   return (
     <svg
       width={size}
       height={size}
       viewBox={`0 0 ${size} ${size}`}
-      styleName={styles.root}
+      className={styles.root}
       role='progressbar'
       aria-valuenow={ariaValueNow}
       aria-valuemin={0}
@@ -41,14 +36,13 @@ const ProgressRing: React.FC<Props> = ({
       xmlns='http://www.w3.org/2000/svg'
     >
       <circle
+        className={styles.progress}
         aria-hidden='true'
         cx={size / 2}
         cy={size / 2}
         fill='transparent'
         r={radius}
         strokeWidth={strokeWidth}
-        styleName={styles.progress_ring}
-        style={circleStyle}
       />
     </svg>
   )
