@@ -1,7 +1,12 @@
-export default function useProgressRingEquations ({
+type Props = {
+  circleLength: number
+  progress: number
+}
+
+export default function useProgressRingEquations({
   circleLength,
-  progress
-} = {}) {
+  progress,
+}: Props) {
   if (!circleLength || isNaN(progress)) {
     throw new Error('Required parameter missing')
   }
